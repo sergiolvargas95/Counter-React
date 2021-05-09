@@ -1,10 +1,14 @@
 import React from 'react';
+import './styles/Counter.css'
+import rightArrow from '../images/arrow-right.svg';
+import leftArrow from '../images/arrow-left.svg';
+import reLoad from '../images/reload.svg';
 
 class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            count: 100
         }
     }
 
@@ -35,13 +39,15 @@ class Counter extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <h1>{this.state.count}</h1>
+            <div className="Container">
+                <div className="Counter__container">
+                    <button className="DownCounter" onClick={this.downCount}><img src={leftArrow} alt="left Arrow"/></button>
+                    <div>
+                        <h1>{this.state.count}</h1>
+                    </div>
+                    <button className="UpCounter" onClick={this.upCount}><img src={rightArrow} alt="left Arrow"/></button>
                 </div>
-                <button className="upcounter" onClick={this.upCount}>UP</button>
-                <button className="downcounter" onClick={this.downCount}>DOWN</button>
-                <button className="resetcounter" onClick={this.resetCount}>RESET</button>
+                <button className="ResetCounter" onClick={this.resetCount}><img src={reLoad} alt="reload"/></button>
             </div>
         )
     }

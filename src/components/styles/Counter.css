@@ -1,0 +1,59 @@
+:root {
+    --blueColor: #1a4176;
+    --whiteColor: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--blueColor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.Container {
+    height: 100vh;
+    width: 100%;
+    background: var(--blueColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Counter__container {
+    height: 70px;
+    width: 200px;
+    background: var(--whiteColor);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.DownCounter, .UpCounter, .ResetCounter {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.DownCounter img, .UpCounter img, .ResetCounter img {
+    height: 20px;
+    width: 20px;
+}
+
+.DownCounter img, .UpCounter img {
+    filter: invert(50%);
+}
+
+.ResetCounter img {
+    margin-top: 20px;
+    filter: invert(100%);
+}
+
+
